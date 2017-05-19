@@ -1,5 +1,7 @@
 package com.heiha.common.lock.master;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+
 /**
  * <br>
  * <b>Project:</b> lock-master<br>
@@ -8,6 +10,7 @@ package com.heiha.common.lock.master;
  *
  * Interface definition which the lock source implementations are supposed to implement.
  */
+@ConditionalOnBean(LockMasterProperties.class)
 public interface LockSource<K, V> {
     /**
      * Using to acquire lock.
