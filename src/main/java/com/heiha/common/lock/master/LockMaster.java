@@ -5,6 +5,12 @@ package com.heiha.common.lock.master;
  * <b>Project:</b> lock-master<br>
  * <b>Date:</b> 2017/5/19 10:21<br>
  * <b>Author:</b> heiha<br>
+ *
+ * <b>Lock Master</b><br>
+ * Lock master is actually a type of lock set. It is distributed, having multi locks, <br>
+ * and lock will be acquired by giving holder exclusive. <br>
+ * <br>
+ * Lock is NON re-entrant, once lock, following acquires failed until lock release.
  */
 public interface LockMaster<L, H> {
     /**
@@ -20,6 +26,7 @@ public interface LockMaster<L, H> {
 
     /**
      * Releases the lock.
+     *
      * @param lock
      * @throws LockMasterException
      */
@@ -27,6 +34,7 @@ public interface LockMaster<L, H> {
 
     /**
      * Check lock status, locked return true.
+     *
      * @return true/false
      * @throws LockMasterException
      */
@@ -34,6 +42,7 @@ public interface LockMaster<L, H> {
 
     /**
      * Get the lock holder.
+     *
      * @param lock
      * @return Lock holder
      * @throws LockMasterException
