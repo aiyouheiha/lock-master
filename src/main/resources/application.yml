@@ -2,7 +2,7 @@
 lock:
     master:
         enable: true
-        source-type: zookeeper
+        source-type: redis
 
 # memcached
 memcached:
@@ -14,15 +14,15 @@ zk:
     namespace: lock-master
 
 # redis
-#spring:
-#    redis:
-#        database: 0 # Redis Database Index (Defult: 0)
-#        host: localhost # Server Address
-#        port: 6379 # Server Port
-#        password: # Server Password (Default: )
-#        pool:
-#            max-active: 8 # Negative means no limit
-#            max-vait: -1 # Waiting time when blocking, Negative means no limit
-#            max-idle: 8
-#            min-idle: 0
-#        timeout: 0 # Connection timeout time (in milliseconds)
+spring:
+    redis:
+        database: 0 # Redis Database Index (Defult: 0)
+        host: localhost # Server Address
+        port: 6379 # Server Port
+        password: # Server Password (Default: )
+        pool:
+            max-active: 8 # Negative means no limit
+            max-vait: -1 # Waiting time when blocking, Negative means no limit
+            max-idle: 8
+            min-idle: 0
+        timeout: 0 # Connection timeout time (in milliseconds)
