@@ -1,4 +1,4 @@
-package com.heiha.common.lock.master.autoconfigure;
+package com.heiha.common.lock.master.zk;
 
 import com.heiha.common.lock.master.LockSource;
 import org.apache.curator.RetryPolicy;

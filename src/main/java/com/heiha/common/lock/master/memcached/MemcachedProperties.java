@@ -1,4 +1,4 @@
-package com.heiha.common.lock.master.autoconfigure;
+package com.heiha.common.lock.master.memcached;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

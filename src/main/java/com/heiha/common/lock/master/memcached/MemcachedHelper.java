@@ -1,4 +1,4 @@
-package com.heiha.common.lock.master.autoconfigure;
+package com.heiha.common.lock.master.memcached;
 
 import com.heiha.common.lock.master.LockSource;
 import net.rubyeye.xmemcached.MemcachedClient;

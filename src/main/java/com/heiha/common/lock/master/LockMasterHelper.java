@@ -1,7 +1,7 @@
 package com.heiha.common.lock.master;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * <b>Author:</b> heiha<br>
  */
 @Component
-@ConditionalOnProperty(prefix = "lock.master", name = "enable", havingValue = "true")
+@ConditionalOnBean(LockMasterProperties.class)
 public class LockMasterHelper implements LockMaster<String, String> {
     @Autowired
     private StringLockMaster stringLockMaster;

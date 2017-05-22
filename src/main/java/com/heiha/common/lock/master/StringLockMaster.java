@@ -1,5 +1,8 @@
 package com.heiha.common.lock.master;
 
+import com.heiha.common.lock.master.LockMaster;
+import com.heiha.common.lock.master.LockMasterException;
+import com.heiha.common.lock.master.LockSource;
 import org.springframework.beans.factory.InitializingBean;
 
 /**
