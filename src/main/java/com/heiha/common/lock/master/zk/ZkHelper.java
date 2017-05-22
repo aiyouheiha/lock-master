@@ -17,6 +17,8 @@ import org.springframework.stereotype.Component;
  * <b>Project:</b> lock-master<br>
  * <b>Date:</b> 2017/5/12 17:02<br>
  * <b>Author:</b> heiha<br>
+ *
+ * ConditionalOnProperty annotation is optional, when zookeeper is not only used on lock.
  */
 @Component
 @ConditionalOnProperty(prefix = "lock.master", name = "source-type", havingValue = "zookeeper")

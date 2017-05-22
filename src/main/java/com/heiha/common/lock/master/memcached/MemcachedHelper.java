@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
  * <b>Project:</b> lock-master<br>
  * <b>Date:</b> 2017/5/18 11:08<br>
  * <b>Author:</b> heiha<br>
+ *
+ * ConditionalOnProperty annotation is optional, when memcached is not only used on lock.
  */
 @Component
 @ConditionalOnProperty(prefix = "lock.master", name = "source-type", havingValue = "memcached")

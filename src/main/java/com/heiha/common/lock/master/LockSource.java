@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
  *
  * Interface definition which the lock source implementations are supposed to implement.
  */
-@ConditionalOnBean(LockMasterProperties.class)
 public interface LockSource<K, V> {
     /**
      * Using to acquire lock.

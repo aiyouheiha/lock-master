@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
  * <b>Author:</b> heiha<br>
  */
 @Component
-@ConditionalOnBean(LockMasterProperties.class)
 public class LockMasterHelper implements LockMaster<String, String> {
     @Autowired
     private StringLockMaster stringLockMaster;
