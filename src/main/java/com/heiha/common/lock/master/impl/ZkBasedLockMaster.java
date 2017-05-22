@@ -1,7 +1,7 @@
 package com.heiha.common.lock.master.impl;
 
 import com.heiha.common.lock.master.StringLockMaster;
-import com.heiha.common.lock.master.impl.source.ZkHelper;
+import com.heiha.common.lock.master.autoconfigure.ZkHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

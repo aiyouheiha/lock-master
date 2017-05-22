@@ -1,4 +1,4 @@
-package com.heiha.common.lock.master.impl.source;
+package com.heiha.common.lock.master.autoconfigure;
 
 import com.heiha.common.lock.master.LockSource;
 import org.apache.curator.RetryPolicy;
@@ -43,7 +43,21 @@ public class ZkHelper implements LockSource<String, String>, InitializingBean {
 
     @Override
     public boolean setIfAbsent(String key, String value) throws Exception {
-        return client.setData().forPath(keyPath(key), value.getBytes()) != null;
+        if (hasKey(key)) {
+            return false;
+        }
+
+        try {
+            lock.acquire();
+            if (hasKey(key)) {
+                return false;
+            }
+            String result =  client.create().forPath(keyPath(key), value.getBytes());
+            System.out.println("setIfAbsent result: " + result);
+            return true;
+        } finally {
+            lock.release();
+        }
     }
 
     @Override

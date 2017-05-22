@@ -8,7 +8,7 @@ package com.heiha.common.lock.master;
  *
  * <b>Lock Master</b><br>
  * Lock master is actually a type of lock set. It is distributed, having multi locks, <br>
- * and lock will be acquired by giving holder exclusive. <br>
+ * and lock will be acquired exclusively by giving holder. <br>
  * <br>
  * Lock is NON re-entrant, once lock, following acquires failed until lock release.
  */

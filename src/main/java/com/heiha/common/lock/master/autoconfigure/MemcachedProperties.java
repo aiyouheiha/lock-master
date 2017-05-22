@@ -1,4 +1,4 @@
-package com.heiha.common.lock.master.impl.source;
+package com.heiha.common.lock.master.autoconfigure;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

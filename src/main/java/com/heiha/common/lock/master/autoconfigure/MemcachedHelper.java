@@ -1,18 +1,13 @@
-package com.heiha.common.lock.master.impl.source;
+package com.heiha.common.lock.master.autoconfigure;
 
-import com.heiha.common.lock.master.LockMasterProperties;
 import com.heiha.common.lock.master.LockSource;
 import net.rubyeye.xmemcached.MemcachedClient;
 import net.rubyeye.xmemcached.XMemcachedClientBuilder;
-import net.rubyeye.xmemcached.exception.MemcachedException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
-
-import java.util.concurrent.TimeoutException;
 
 /**
  * <br>
